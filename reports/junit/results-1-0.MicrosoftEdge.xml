@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="4" failures="1" errors="0" skipped="0">
+  <testsuite name="first e2e test suite" timestamp="2026-02-05T20:25:55" time="17.566" tests="1" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="first e2e test suite"/>
+      <property name="capabilities" value="microsoftedge.144_0_3719_104.linux"/>
+      <property name="file" value="file:///home/ese/2025/Automaticion/07-%5BModule%2004%5D%20WebDriverIO/WebDriverIO/src/specs/test.spec.js"/>
+    </properties>
+    <testcase classname="microsoftedge.144_0_3719_104.linux.first_e2e_test_suite" name="should open www epam com" time="17.562">
+      <system-out><![CDATA[
+COMMAND: GET /session/2593fd81420d73f02d0f7efb59022fdd/title - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+  </testsuite>
+  <testsuite name="menu navigation test suite" timestamp="2026-02-05T20:26:12" time="31.427" tests="3" failures="1" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="menu navigation test suite"/>
+      <property name="capabilities" value="microsoftedge.144_0_3719_104.linux"/>
+      <property name="file" value="file:///home/ese/2025/Automaticion/07-%5BModule%2004%5D%20WebDriverIO/WebDriverIO/src/specs/test.spec.js"/>
+    </properties>
+    <testcase classname="microsoftedge.144_0_3719_104.linux.menu_navigation_test_suite" name="should open hamburger menu" time="4.643">
+      <system-out><![CDATA[
+COMMAND: GET /session/2593fd81420d73f02d0f7efb59022fdd/element/f.50464768F8864E14574AF8399C45D71A.d.D22BEDE5923DB3A8B839ECDFD02022B7.e.28/name - {}
+RESULT: {}
+COMMAND: POST /session/2593fd81420d73f02d0f7efb59022fdd/element/f.50464768F8864E14574AF8399C45D71A.d.D22BEDE5923DB3A8B839ECDFD02022B7.e.28/click - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="microsoftedge.144_0_3719_104.linux.menu_navigation_test_suite" name="should navigate to Services page through hamburger menu" time="15.251">
+      <failure message="Element &lt;a class=&quot;hamburger-menu__link first-level-link gradient-text&quot; href=&quot;/services&quot; style=&quot;background-image: linear-gradient(to left, rgb(184, 150, 255) 10.5px, rgb(0, 246, 255) 52.5px, rgb(0, 255, 240) 100%);&quot;>Services&lt;/a> did not become interactable"/>
+      <system-out><![CDATA[
+COMMAND: POST /session/2593fd81420d73f02d0f7efb59022fdd/element/f.50464768F8864E14574AF8399C45D71A.d.B6A9025F6ED4EFBB1F938BA315DAC505.e.50/click - {}
+RESULT: {}
+COMMAND: POST /session/2593fd81420d73f02d0f7efb59022fdd/element/f.50464768F8864E14574AF8399C45D71A.d.B6A9025F6ED4EFBB1F938BA315DAC505.e.63/click - {}
+RESULT: {}
+COMMAND: GET /session/2593fd81420d73f02d0f7efb59022fdd/element/f.50464768F8864E14574AF8399C45D71A.d.B6A9025F6ED4EFBB1F938BA315DAC505.e.63/name - {}
+RESULT: {}
+]]></system-out>
+      <system-err><![CDATA[
+webdriverio(middleware): element did not become interactable: Element <a class="hamburger-menu__link first-level-link gradient-text" href="/services" style="background-image: linear-gradient(to left, rgb(184, 150, 255) 10.5px, rgb(0, 246, 255) 52.5px, rgb(0, 255, 240) 100%);">Services</a> did not become interactable
+]]></system-err>
+    </testcase>
+    <testcase classname="microsoftedge.144_0_3719_104.linux.menu_navigation_test_suite" name="should navigate to Services page through top menu" time="11.528">
+      <system-out><![CDATA[
+COMMAND: POST /session/2593fd81420d73f02d0f7efb59022fdd/window/rect - {"x":null,"y":null,"width":1920,"height":1080}
+RESULT: {"x":null,"y":null,"width":1920,"height":1080}
+COMMAND: POST /session/2593fd81420d73f02d0f7efb59022fdd/element/f.50464768F8864E14574AF8399C45D71A.d.FF1FC86C872CE600906F1BC8E471F6A5.e.97/click - {}
+RESULT: {}
+COMMAND: GET /session/2593fd81420d73f02d0f7efb59022fdd/title - {}
+RESULT: {}
+COMMAND: DELETE /session/2593fd81420d73f02d0f7efb59022fdd - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+  </testsuite>
+</testsuites>

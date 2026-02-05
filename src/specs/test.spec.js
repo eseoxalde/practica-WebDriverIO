@@ -45,7 +45,7 @@ describe("menu navigation test suite", () => {
     await expect(browser).toHaveTitle("Services | EPAM");
   });
 
-  it.only("should navigate to Services page through top menu", async () => {
+  it("should navigate to Services page through top menu", async () => {
     await browser.url("/");
     await browser.setWindowSize(1920, 1080);
 

@@ -1,3 +1,5 @@
+const { existsSync, mkdirSync } = require("fs");
+
 exports.config = {
   //
   // ====================
@@ -126,7 +128,27 @@ exports.config = {
   // Test reporter for stdout.
   // The only one supported by default is 'dot'
   // see also: https://webdriver.io/docs/dot-reporter
-  reporters: ["spec"],
+  reporters: [
+    "spec",
+    [
+      "junit",
+      {
+        outputDir: "./reports/junit",
+        outputFileFormat: function (options) {
+          // optional
+          return `results-${options.cid}.${options.capabilities.browserName}.xml`;
+        },
+      },
+    ],
+    [
+      "allure",
+      {
+        outputDir: "allure-results",
+        disableWebdriverStepsReporting: true,
+        disableWebdriverScreenshotsReporting: true,
+      },
+    ],
+  ],
 
   // Options to be passed to Mocha.
   // See the full list at http://mochajs.org/
@@ -229,8 +251,18 @@ exports.config = {
    * @param {boolean} result.passed    true if test has passed, otherwise false
    * @param {object}  result.retries   information about spec related retries, e.g. `{ attempts: 0, limit: 0 }`
    */
-  // afterTest: function(test, context, { error, result, duration, passed, retries }) {
-  // },
+
+  afterTest: async (test, context, { error }) => {
+    if (error) {
+      const dirPath = "./screenshots/";
+      if (!existsSync(dirPath)) {
+        mkdirSync(dirPath, { recursive: true });
+      }
+
+      const fileName = `${test.title}.png`;
+      await browser.saveScreenshot(dirPath + fileName);
+    }
+  },
 
   /**
    * Hook that gets executed after the suite has ended

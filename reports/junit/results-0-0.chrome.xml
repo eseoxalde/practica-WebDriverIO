@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="4" failures="0" errors="0" skipped="0">
+  <testsuite name="first e2e test suite" timestamp="2026-02-05T20:25:54" time="17.179" tests="1" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="first e2e test suite"/>
+      <property name="capabilities" value="chrome.143_0_7499_40.linux"/>
+      <property name="file" value="file:///home/ese/2025/Automaticion/07-%5BModule%2004%5D%20WebDriverIO/WebDriverIO/src/specs/test.spec.js"/>
+    </properties>
+    <testcase classname="chrome.143_0_7499_40.linux.first_e2e_test_suite" name="should open www epam com" time="17.177">
+      <system-out><![CDATA[
+COMMAND: GET /session/b1d8111d4c56c8adba046009f513a411/title - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+  </testsuite>
+  <testsuite name="menu navigation test suite" timestamp="2026-02-05T20:26:11" time="11.335" tests="3" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="menu navigation test suite"/>
+      <property name="capabilities" value="chrome.143_0_7499_40.linux"/>
+      <property name="file" value="file:///home/ese/2025/Automaticion/07-%5BModule%2004%5D%20WebDriverIO/WebDriverIO/src/specs/test.spec.js"/>
+    </properties>
+    <testcase classname="chrome.143_0_7499_40.linux.menu_navigation_test_suite" name="should open hamburger menu" time="5.232">
+      <system-out><![CDATA[
+COMMAND: GET /session/b1d8111d4c56c8adba046009f513a411/element/f.B2E50500947A5B0999C99995E770484F.d.A5AD1C482A67CA6553024C18E5806A85.e.23/name - {}
+RESULT: {}
+COMMAND: POST /session/b1d8111d4c56c8adba046009f513a411/element/f.B2E50500947A5B0999C99995E770484F.d.A5AD1C482A67CA6553024C18E5806A85.e.23/click - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.143_0_7499_40.linux.menu_navigation_test_suite" name="should navigate to Services page through hamburger menu" time="3.43">
+      <system-out><![CDATA[
+COMMAND: POST /session/b1d8111d4c56c8adba046009f513a411/element/f.B2E50500947A5B0999C99995E770484F.d.5783FB02224C48F3A6FA64A012A035E0.e.42/click - {}
+RESULT: {}
+COMMAND: POST /session/b1d8111d4c56c8adba046009f513a411/element/f.B2E50500947A5B0999C99995E770484F.d.5783FB02224C48F3A6FA64A012A035E0.e.57/click - {}
+RESULT: {}
+COMMAND: GET /session/b1d8111d4c56c8adba046009f513a411/title - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.143_0_7499_40.linux.menu_navigation_test_suite" name="should navigate to Services page through top menu" time="2.67">
+      <system-out><![CDATA[
+COMMAND: POST /session/b1d8111d4c56c8adba046009f513a411/window/rect - {"x":null,"y":null,"width":1920,"height":1080}
+RESULT: {"x":null,"y":null,"width":1920,"height":1080}
+COMMAND: POST /session/b1d8111d4c56c8adba046009f513a411/element/f.B2E50500947A5B0999C99995E770484F.d.A3682AB0E0AF61BB8F48885464F9F43A.e.98/click - {}
+RESULT: {}
+COMMAND: GET /session/b1d8111d4c56c8adba046009f513a411/title - {}
+RESULT: {}
+COMMAND: DELETE /session/b1d8111d4c56c8adba046009f513a411 - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,1 @@
+{"total":2,"items":[{"uid":"dee0710967af959acc58de736c0bcea6","name":"menu navigation test suite","statistic":{"failed":0,"broken":1,"skipped":0,"passed":5,"unknown":0,"total":6}},{"uid":"41a29b26847a1ca4307522fc1f41bb30","name":"first e2e test suite","statistic":{"failed":0,"broken":0,"skipped":0,"passed":2,"unknown":0,"total":2}}]}
